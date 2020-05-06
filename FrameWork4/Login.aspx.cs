@@ -24,7 +24,11 @@ namespace FrameWork4
                 Msg_Login.Visible = true;
                 Session["username"] = txtUsuario.Text.Trim();
                 Session["sessionID"] = resultado.Item2;
-                
+                var rol = FrameWork4.ConexionLogin.validarPortalUserRol(resultado.Item2);
+                if (rol.Item2!=1)
+                {
+                    Response.Redirect("Default - Copia.aspx");  // Acceso Concedido  Default - Copia
+                }
                 Response.Redirect("Default.aspx");  // Acceso Concedido
             }
             else

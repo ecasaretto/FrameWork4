@@ -35,6 +35,22 @@ namespace FrameWork4
              
         }
 
+        internal static Tuple<int, int> validarPortalUserRol(string sessionID )
+        {
+            int res = 0;
+            int isAdmin = 0;
+            DbCommand comm = Database.CreateCommand("Portal_User_Rol_Val");
+            comm.Parameters.Add(Database.CreateParameter(comm, "@sessionID", DbType.String, sessionID));
+            DataTable dt = Database.ExecuteSelectCommand(comm);
+            if (dt.Rows.Count > 0)
+            {
+                res = (int)dt.Rows[0]["res"];
+                isAdmin = (int)dt.Rows[0]["IsAdmin"];
+            }
+            return Tuple.Create(res, isAdmin);
+
+        }
+
 
     }
 }
