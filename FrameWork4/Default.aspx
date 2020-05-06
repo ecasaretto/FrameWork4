@@ -8,7 +8,10 @@
     <title></title>
 </head>
 <body>
-<div><asp:Label ID="Msg_Bienvenida" runat="server" Text="Bienvenido"></asp:Label></div>
+    <form id="form1" runat="server">
+<div><asp:Label ID="Msg_Bienvenida" runat="server" Text="Bienvenido la concha de tu madre"></asp:Label>&nbsp;</div>
 <div><asp:Label ID="Msg_Nombre" runat="server" Text=""></asp:Label></div>
+<div><asp:Label ID="Msg_Nombre0" runat="server" Text=""></asp:Label></div>
+    </form>
 </body>
 </html>
