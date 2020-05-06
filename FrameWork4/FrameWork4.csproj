@@ -67,8 +67,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Default - Copia.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="Default_Admins.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -77,19 +77,19 @@
   <ItemGroup>
     <Compile Include="ConexionLogin.cs" />
     <Compile Include="DataBase.cs" />
-    <Compile Include="Default - Copia.aspx.cs">
-      <DependentUpon>Default - Copia.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default - Copia.aspx.designer.cs">
-      <DependentUpon>Default - Copia.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default_Admins.aspx.cs">
+      <DependentUpon>Default_Admins.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default_Admins.aspx.designer.cs">
+      <DependentUpon>Default_Admins.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
