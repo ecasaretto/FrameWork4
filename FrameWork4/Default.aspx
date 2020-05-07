@@ -12,6 +12,7 @@
 <div><asp:Label ID="Msg_Bienvenida" runat="server" Text="Bienvenido la concha de tu madre"></asp:Label>&nbsp;</div>
 <div><asp:Label ID="Msg_Nombre" runat="server" Text=""></asp:Label></div>
 <div><asp:Label ID="Msg_Nombre1" runat="server" Text="La concha de tu madre All Boys!"></asp:Label></div>
+        <asp:TextBox ID="valorSP" runat="server" OnTextChanged="valorSP_TextChanged">valorSP</asp:TextBox>
     </form>
 </body>
 </html>

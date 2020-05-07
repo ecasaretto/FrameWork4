@@ -11,6 +11,8 @@ namespace FrameWork4
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            var resultadosp = FrameWork4.ConexionLogin.muestraValorRol();
+            valorSP.Text = resultadosp;
             Msg_Nombre.Visible = false;
             if ( Session["sessionID"] == null)
             {
@@ -20,6 +22,12 @@ namespace FrameWork4
                 Msg_Nombre.Visible = true;
 
             }
+            
+        }
+
+        protected void valorSP_TextChanged(object sender, EventArgs e)
+        {
+
             
         }
     }

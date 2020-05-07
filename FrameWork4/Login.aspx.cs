@@ -16,7 +16,7 @@ namespace FrameWork4
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-
+            
             var resultado = FrameWork4.ConexionLogin.validarLogin(txtUsuario.Text.Trim(), txtPassword.Text.Trim());
             if (resultado.Item1 > 0)
             {
@@ -24,15 +24,10 @@ namespace FrameWork4
                 Msg_Login.Visible = true;
                 Session["username"] = txtUsuario.Text.Trim();
                 Session["sessionID"] = resultado.Item2;
-                var rol = FrameWork4.ConexionLogin.validarPortalUserRol(resultado.Item2);
-                if (rol.Item2==1)
-                {
-                    Response.Redirect("Default_Admins.aspx");  // Acceso Concedido  Default - Copia
-                }
-                else { 
-                Response.Redirect("Default.aspx");  // Acceso Concedido
-                }
+                Response.Redirect("Default.aspx");
+                               
             }
+
             else
             {
                 Msg_Login.Text = "Login InValido";
