@@ -11,7 +11,7 @@ namespace FrameWork4
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            var resultadosp = FrameWork4.ConexionLogin.muestraValorRol();
+            var resultadosp = FrameWork4.ConexionLogin.muestraValor();
             valorSP.Text = resultadosp;
             Msg_Nombre.Visible = false;
             if ( Session["sessionID"] == null)
