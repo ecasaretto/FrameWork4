@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.Common;
 using System.Linq;
 using System.Web;
@@ -12,20 +13,31 @@ namespace FrameWork4
     }
 
     internal static Tuple<string, string, string, string, int> PortalAddUsers(string email, string firstName, string lastName, string password, int isAdmin)
-    {
-        int enable = 1; 
+    { 
+        int enable = 1;
+        int resultadoSQL = -1;
         DbCommand comandoSQL = Database.CreateCommand("Portal_Add_Users");
         comandoSQL.Parameters.Add(Database.CreateParameter(comandoSQL, "@fisrtName",System.Data.DbType.String, firstName));
         comandoSQL.Parameters.Add(Database.CreateParameter(comandoSQL, "@lastName", System.Data.DbType.String, lastName));
         comandoSQL.Parameters.Add(Database.CreateParameter(comandoSQL, "@password", System.Data.DbType.String, password));
         comandoSQL.Parameters.Add(Database.CreateParameter(comandoSQL, "@isAdmin", System.Data.DbType.String, isAdmin));
         comandoSQL.Parameters.Add(Database.CreateParameter(comandoSQL, "@enable", System.Data.DbType.String, enable));
-
+       
+        DataTable dt = Database.ExecuteSelectCommand(comandoSQL);
+        if (dt.Rows.Count > 0)
+        {
+            resultadoSQL = (int)dt.Rows[0]["COMPLETAR ACA CATAJO PUTO"];
+           
 
         }
+        return Tuple.Create(resultadoSQL);
 
 
-    internal static Tuple<int, string> altaEmpleado(string nombre, string Apellido, string EmpleadoCategoriaDescripcion,
+    }
+
+
+    /*
+     internal static Tuple<int, string> altaEmpleado(string nombre, string Apellido, string EmpleadoCategoriaDescripcion,
           string EmpleadoEstadoDescripcion, DateTime FechaAlta, DateTime FechaNacimiento, string CorreoElectronico,
           string telefono, string NroCUIL, string Domicilio)
     {
@@ -56,6 +68,7 @@ namespace FrameWork4
 
     }
 
+     */
 
 
 }

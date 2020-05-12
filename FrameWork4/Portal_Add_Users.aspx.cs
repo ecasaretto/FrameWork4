@@ -17,7 +17,7 @@ namespace FrameWork4
         protected void Button1_Click(object sender, EventArgs e)
         {
 
-            var resultadoEjecucionSQL = FrameWork4.Portal_Add_User.
+            var resultadoEjecucionSQL = FrameWork4
                 { 
             
             }
