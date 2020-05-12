@@ -6,6 +6,10 @@ using System.Web;
 namespace FrameWork4
 {
     public class Portal_Add_User
+
     {
     }
+
+
+
 }
