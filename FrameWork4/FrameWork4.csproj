@@ -91,7 +91,7 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Portal_Add_User.cs" />
+    <Compile Include="Portal_Add_Users.cs" />
     <Compile Include="Portal_Add_Users.aspx.cs">
       <DependentUpon>Portal_Add_Users.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
