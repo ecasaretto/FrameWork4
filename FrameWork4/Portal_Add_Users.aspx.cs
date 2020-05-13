@@ -17,16 +17,11 @@ namespace FrameWork4
         protected void Button1_Click(object sender, EventArgs e)
         {
 
-            var resultadoEjecucionSQL = FrameWork4
-                { 
-            
-            }
+            var resultadoSQL = FrameWork4.Portal_Add_User.PortalAddUser(TextBoxEmail.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text,isAdmin.Checked,isEnable.Checked);
 
 
-            var resultado = FrameWork4.AltaEmpleado.altaEmpleado(TxtNombre.Text.Trim(), TxtApellido.Text.Trim(), TxtCategoriaEmpleado.Text.Trim(),
-                   TxtEmpleadoEstado.Text.Trim(), CalendarFechaIngreso.SelectedDate, CalendarFechaNacimiento.SelectedDate,
-                   TxtCorreoElectronico.Text.Trim(), TxtTelefono.Text.Trim(), TxtNroCuil.Text.Trim(), TxtEmpleadoDomicilio.Text.Trim());
-            if (resultado.Item1 > 0)
+
+             if (resultado.Item1 > 0)
             {
                 Msg_AltaEmpleado.Text = "No se dio de alta al forro del usuario";
                 Msg_AltaEmpleado.Visible = true;
