@@ -22,7 +22,8 @@ namespace FrameWork4
             
             int resultadoSQL = -1;
             DbCommand comandoSQL = Database.CreateCommand("Portal_Add_Users");
-            comandoSQL.Parameters.Add(Database.CreateParameter(comandoSQL, "@fisrtName", System.Data.DbType.String, firstName));
+            comandoSQL.Parameters.Add(Database.CreateParameter(comandoSQL, "@email", System.Data.DbType.String, email));
+            comandoSQL.Parameters.Add(Database.CreateParameter(comandoSQL, "@firstName", System.Data.DbType.String, firstName));
             comandoSQL.Parameters.Add(Database.CreateParameter(comandoSQL, "@lastName", System.Data.DbType.String, lastName));
             comandoSQL.Parameters.Add(Database.CreateParameter(comandoSQL, "@password", System.Data.DbType.String, password));
             comandoSQL.Parameters.Add(Database.CreateParameter(comandoSQL, "@isAdmin", System.Data.DbType.String, isAdmin));

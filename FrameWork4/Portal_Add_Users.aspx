@@ -1,5 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Portal_Add_Users.aspx.cs" Inherits="FrameWork4.Portal_Add_Users" %>
 
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -10,12 +11,17 @@
         .auto-style1 {
             text-align: left;
         }
+        .auto-style2 {
+            background-color: #FF0000;
+            font-size: large;
+        }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div class="auto-style1">
-            ===== Alta de Usuario =====
+            <strong><span class="auto-style2">===== Alta de Usuario =====
+            </span></strong>
             <br />
             Correo Elestronico&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="TextBoxEmail" runat="server"></asp:TextBox>
@@ -29,15 +35,15 @@
             <br />
             Repetir Contraseña&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
             <br />
-            Administrador&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Administrador&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
             <asp:CheckBox ID="isAdmin" runat="server" />
             <br />
-            Alta de usuario habilitado&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Alta de usuario habilitado&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
             <asp:CheckBox ID="isEnable" runat="server" />
             <br />
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Darme de Alta" />
-&nbsp;&nbsp; Resultado
-            <asp:Label ID="Label1" runat="server" Text="..."></asp:Label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="mensajederesultado" runat="server" Text="Label"></asp:Label>
         </div>
     </form>
 </body>

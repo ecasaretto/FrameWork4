@@ -21,18 +21,22 @@ namespace FrameWork4
 
 
 
-             if (resultado.Item1 > 0)
+
+            if (resultadoSQL > 0)
             {
-                Msg_AltaEmpleado.Text = "No se dio de alta al forro del usuario";
-                Msg_AltaEmpleado.Visible = true;
 
+                mensajederesultado.Text = "Usuario dado de alta correctamente ";
+                mensajederesultado.Visible = true;
 
-                Response.Redirect("ReporteConsultoria.aspx");  // Acceso Concedido
+           
             }
             else
             {
-                Msg_AltaEmpleado.Text = "Usuario dado de alta correctamente ";
-                Msg_AltaEmpleado.Visible = true;
+                mensajederesultado.Text = "No se dio de alta al forro del usuario";
+                mensajederesultado.Visible = true;
+
+
+          //      Response.Redirect("Default.aspx");  // Acceso Concedido
 
             }
         }

@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="Default.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="MiPerfil.aspx" />
     <Content Include="Portal_Add_Users.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -91,6 +92,14 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="MiPerfil.aspx.cs">
+      <DependentUpon>MiPerfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiPerfil.aspx.designer.cs">
+      <DependentUpon>MiPerfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiPerfil.cs" />
     <Compile Include="Portal_Add_Users.cs" />
     <Compile Include="Portal_Add_Users.aspx.cs">
       <DependentUpon>Portal_Add_Users.aspx</DependentUpon>
