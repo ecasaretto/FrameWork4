@@ -13,11 +13,11 @@ namespace FrameWork4
         {
 
             email.Text = Session["username"].ToString() ;
-            firstName.Text =
-            lastName.Text =
-            lastLogin.Text =
-            lastChangePassword.Text = 
-            isAdmin.Text = 
+            //firstName.Text =
+            //lastName.Text =
+            //lastLogin.Text =
+            //lastChangePassword.Text = 
+            //isAdmin.Text = 
             
             }
 
