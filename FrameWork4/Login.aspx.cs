@@ -22,7 +22,7 @@ namespace FrameWork4{
 
 
                         var resultadoSql = FrameWork4.MiPerfil.miPerfil(resultado.Item2); //Session["sessionID"] 
-                Session["isAdmin"] = resultadoSql.Item6.ToString();
+               //Session["isAdmin"] = resultadoSql.Item6.ToString();
 
              //   int rs = resultadoSql.Item6;
 
