@@ -24,39 +24,21 @@ namespace FrameWork4
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Control Msg_Bienvenida.
+        /// Control ButtonToLogin.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Msg_Bienvenida;
+        protected global::System.Web.UI.WebControls.Button ButtonToLogin;
 
         /// <summary>
-        /// Control Msg_Nombre.
+        /// Control ButtonToProfile.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Msg_Nombre;
-
-        /// <summary>
-        /// Control Msg_Nombre1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Msg_Nombre1;
-
-        /// <summary>
-        /// Control valorSP.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox valorSP;
+        protected global::System.Web.UI.WebControls.Button ButtonToProfile;
     }
 }

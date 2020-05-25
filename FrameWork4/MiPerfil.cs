@@ -29,7 +29,8 @@ namespace FrameWork4
             string lastName = "...";
             string lastLogin="..";
             string lastChangePassword="..";
-            int isAdmin = -1;
+            int isAdmin = -1 ;
+            String esAdmin = null;
 
             DbCommand comandoSQL = Database.CreateCommand("sp_mostrarPerfil");
             comandoSQL.Parameters.Add(Database.CreateParameter(comandoSQL, "@email", System.Data.DbType.String, email));
@@ -39,9 +40,12 @@ namespace FrameWork4
             {
                 res = (int)dt.Rows[0]["res"];
                 firstName = dt.Rows[0]["firstName"].ToString();
+                lastName = dt.Rows[0]["lastName"].ToString();
                 lastLogin = dt.Rows[0]["lastLogin"].ToString();
                 lastChangePassword = dt.Rows[0]["lastChangePassword"].ToString();
-                isAdmin = 0;
+                esAdmin = dt.Rows[0]["isAdmin"].ToString();
+                isAdmin = (int)esAdmin;
+           
             }
             return Tuple.Create(res,firstName,lastName,lastLogin,lastChangePassword,isAdmin);
 

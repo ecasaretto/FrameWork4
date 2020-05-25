@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MiPerfil.aspx.cs" Inherits="FrameWork4.MiPerfil" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MiPerfilAdmin.aspx.cs" Inherits="FrameWork4.MiPerfilAdmin" %>
 
 <!DOCTYPE html>
 
@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <style type="text/css">
+
         .auto-style1 {
             color: #3333CC;
             font-size: xx-large;
@@ -14,9 +15,9 @@
     </style>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form2" runat="server">
         <div>
-            <span class="auto-style1"><strong>MI PERFIL</strong></span><br />
+            <span class="auto-style1"><strong>ADMINISTRADOR&nbsp; </strong></span><br />
             <br />
             correo eleStronico&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="email" runat="server" Text="Label"></asp:Label>
@@ -50,6 +51,15 @@
             cambiar foto:
             <br />
             <br />
+            <span class="auto-style1"><strong>Mis herramientas como Admin, no como un user SORETE, SO RE TE<br />
+            </strong></span>
+            <br />
+            Dar de alta nuevo usuario&nbsp; <asp:Button ID="ButtonAltaUsuario" runat="server" Text="ButtonAltaUsuario" />
+            <br />
+        </div>
+    </form>
+    <form id="form1" runat="server">
+        <div>
         </div>
     </form>
 </body>

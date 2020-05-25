@@ -18,7 +18,25 @@ namespace FrameWork4{
                 Msg_Login.Visible = true;
                 Session["username"] = txtUsuario.Text.Trim();
                 Session["sessionID"] = resultado.Item2;
-               Response.Redirect("MiPerfil.aspx");                               
+       
+
+
+                        var resultadoSql = FrameWork4.MiPerfil.miPerfil(resultado.Item2); //Session["sessionID"] 
+                Session["isAdmin"] = resultadoSql.Item6.ToString();
+
+             //   int rs = resultadoSql.Item6;
+
+                if (resultadoSql.Item6 > 0) // 0 = usuario plano, 1 = admin. 
+                        {
+
+                    Response.Redirect("MiPerfilAdmin.aspx");
+                        }
+                        else
+                        {
+                    Response.Redirect("MiPerfil.aspx");
+
+                }
+
             }
             else
             {

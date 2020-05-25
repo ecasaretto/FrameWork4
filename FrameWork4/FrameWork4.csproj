@@ -70,6 +70,7 @@
     <Content Include="Default.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="MiPerfil.aspx" />
+    <Content Include="MiPerfilAdmin.aspx" />
     <Content Include="Portal_Add_Users.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -100,6 +101,13 @@
       <DependentUpon>MiPerfil.aspx</DependentUpon>
     </Compile>
     <Compile Include="MiPerfil.cs" />
+    <Compile Include="MiPerfilAdmin.aspx.cs">
+      <DependentUpon>MiPerfilAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiPerfilAdmin.aspx.designer.cs">
+      <DependentUpon>MiPerfilAdmin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Portal_Add_Users.cs" />
     <Compile Include="Portal_Add_Users.aspx.cs">
       <DependentUpon>Portal_Add_Users.aspx</DependentUpon>

@@ -9,10 +9,23 @@
 </head>
 <body>
     <form id="form1" runat="server">
-<div><asp:Label ID="Msg_Bienvenida" runat="server" Text="Bienvenido la concha de tu madre"></asp:Label>&nbsp;</div>
-<div><asp:Label ID="Msg_Nombre" runat="server" Text=""></asp:Label></div>
-<div><asp:Label ID="Msg_Nombre1" runat="server" Text="La concha de tu madre All Boys!"></asp:Label></div>
-        <asp:TextBox ID="valorSP" runat="server" OnTextChanged="valorSP_TextChanged">valorSP</asp:TextBox>
+        Lenguajes de Programacion V<br />
+        <br />
+        Iniciar sesion&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br />
+        <asp:Button ID="ButtonToLogin" runat="server" OnClick="ButtonToLogin_Click" Text="ButtonToLogin" />
+        <br />
+        <br />
+        Mis datos de usuario&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br />
+        <asp:Button ID="ButtonToProfile" runat="server" OnClick="ButtonToProfile_Click" Text="ButtonToProfile" />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
     </form>
 </body>
 </html>
