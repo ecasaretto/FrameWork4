@@ -43,13 +43,14 @@ namespace FrameWork4
                 lastName = dt.Rows[0]["lastName"].ToString();
                 lastLogin = dt.Rows[0]["lastLogin"].ToString();
                 lastChangePassword = dt.Rows[0]["lastChangePassword"].ToString();
-                isAdmin = 0; //dt.Rows[0]["isAdmin"].ToString()
+                isAdmin = 1; //dt.Rows[0]["isAdmin"].ToString()
                              // isAdmin = (int)esAdmin;
-
+                             ezeputo
                 aux = dt.Rows[0]["isAdmin"].ToString();
                 if (aux.Equals("1") )
                     {
-                    isAdmin = 1;
+                    isAdmin = 0;
+
                 }
            
             }
