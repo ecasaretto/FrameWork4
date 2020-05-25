@@ -26,3 +26,10 @@ C:\Users\Pablo\Documents\GitHub\Framework4\FrameWork4\obj\Debug\FrameWork4.cspro
 C:\Users\Pablo\Documents\GitHub\Framework4\FrameWork4\obj\Debug\FrameWork4.csproj.CoreCompileInputs.cache
 C:\Users\Pablo\Documents\GitHub\Framework4\FrameWork4\obj\Debug\FrameWork4.dll
 C:\Users\Pablo\Documents\GitHub\Framework4\FrameWork4\obj\Debug\FrameWork4.pdb
+C:\Users\ExE\source\repos\repos\LP V\FrameWork4\FrameWork4\bin\FrameWork4.dll.config
+C:\Users\ExE\source\repos\repos\LP V\FrameWork4\FrameWork4\bin\FrameWork4.dll
+C:\Users\ExE\source\repos\repos\LP V\FrameWork4\FrameWork4\bin\FrameWork4.pdb
+C:\Users\ExE\source\repos\repos\LP V\FrameWork4\FrameWork4\obj\Debug\FrameWork4.csprojAssemblyReference.cache
+C:\Users\ExE\source\repos\repos\LP V\FrameWork4\FrameWork4\obj\Debug\FrameWork4.csproj.CoreCompileInputs.cache
+C:\Users\ExE\source\repos\repos\LP V\FrameWork4\FrameWork4\obj\Debug\FrameWork4.dll
+C:\Users\ExE\source\repos\repos\LP V\FrameWork4\FrameWork4\obj\Debug\FrameWork4.pdb

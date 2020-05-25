@@ -11,18 +11,14 @@ namespace FrameWork4
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Session["username"] = txtUsuario.Text.Trim();
-            var varPortalUserName = Session["username"];
-            //var varObtenerDatosUsuario = FrameWork4.ConexionLogin.validarLogin(txtUsuario.Text.Trim(), txtPassword.Text.Trim());
-            var varObtenerDatosUsuario = FrameWork4.MiPerfil.miPerfil(varPortalUserName.ToString());
-            // email.Text = Session["username"].ToString() ;
-            //firstName.Text =
-            //lastName.Text =
-            //lastLogin.Text =
-            //lastChangePassword.Text = 
-            //isAdmin.Text = 
 
-
+           email.Text = Session["username"].ToString();
+           var resultadoSql =FrameWork4.MiPerfil.miPerfil(email.Text);
+            firstName.Text= resultadoSql.Item2.ToString();
+            lastName.Text = resultadoSql.Item3.ToString();
+            lastLogin.Text = resultadoSql.Item4.ToString();
+            lastChangePassword.Text = resultadoSql.Item4.ToString();
+            isAdmin.Text = resultadoSql.Item6.ToString();
 
         }
 
