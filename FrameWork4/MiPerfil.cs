@@ -16,11 +16,11 @@ namespace FrameWork4
             //
         }
 
-        internal static int LmiPerfil(String email)
+        internal static int miPerfil(String email)
         {
 
             int resultadoSQL = -1;
-            DbCommand comandoSQL = Database.CreateCommand("sp_DatosPerfilUsuario");
+            DbCommand comandoSQL = Database.CreateCommand("sp_mostrarPerfil");
             comandoSQL.Parameters.Add(Database.CreateParameter(comandoSQL, "@email", System.Data.DbType.String, email));
 
 
