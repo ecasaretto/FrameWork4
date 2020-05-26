@@ -23,7 +23,7 @@ namespace FrameWork4
                 lastName.Text = resultadoSql.Item3.ToString();
                 lastLogin.Text = resultadoSql.Item4.ToString();
                 lastChangePassword.Text = resultadoSql.Item4.ToString();
-                isAdmin.Text = "1";
+               // isAdmin.Text = "1";
 
 
             }
