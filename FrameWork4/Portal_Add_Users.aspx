@@ -44,6 +44,12 @@
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Darme de Alta" />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="mensajederesultado" runat="server" Text="Label"></asp:Label>
+            <br />
+            <br />
+            <asp:Button ID="ButtonBack" runat="server" OnClick="ButtonBack_Click" Text="ButtonBack" />
+            <br />
+            <br />
+            <asp:Button ID="ButtonToDefault" runat="server" OnClick="ButtonToDefault_Click" Text="ButtonToDefault" />
         </div>
     </form>
 </body>

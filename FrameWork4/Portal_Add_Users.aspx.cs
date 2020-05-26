@@ -11,11 +11,16 @@ namespace FrameWork4
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["sessionID"] == null)
+            {
+                Response.Redirect("Login.aspx");  // Sin Logeo Dirigido a Login
+            }
+           
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+
 
             var resultadoSQL = FrameWork4.Portal_Add_User.PortalAddUser(TextBoxEmail.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text,isAdmin.Checked,isEnable.Checked);
 
@@ -39,6 +44,16 @@ namespace FrameWork4
           //      Response.Redirect("Default.aspx");  // Acceso Concedido
 
             }
+        }
+
+        protected void ButtonBack_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("MiPerfilAdmin.aspx");
+        }
+
+        protected void ButtonToDefault_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Default.aspx");
         }
     }
 }

@@ -10,11 +10,7 @@ namespace FrameWork4
 {
     public partial class MiPerfil
     {
-        private String nombre = "";
-        private String apellido = "";
-        private String ultimoIngreso = "";
-        private String ultimoCambioPass = "";
-        private String esAdmin = "";
+    
         static MiPerfil()
         {
             //
@@ -24,18 +20,18 @@ namespace FrameWork4
 
         internal static Tuple<int,string, string, string, string, int> miPerfil(String email)
         {
-            int res = -1;
+            
             string firstName = "...";
             string lastName = "...";
             string lastLogin="..";
             string lastChangePassword="..";
-            int isAdmin = -1 ;
-            string aux = "0";
 
+            int res = -1;
+            int isAdmin = -1 ;
+           
             DbCommand comandoSQL = Database.CreateCommand("sp_mostrarPerfil");
             comandoSQL.Parameters.Add(Database.CreateParameter(comandoSQL, "@email", System.Data.DbType.String, email));
             DataTable dt = Database.ExecuteSelectCommand(comandoSQL);
-
             if (dt.Rows.Count > 0)
             {
                 res = (int)dt.Rows[0]["res"];
@@ -43,23 +39,31 @@ namespace FrameWork4
                 lastName = dt.Rows[0]["lastName"].ToString();
                 lastLogin = dt.Rows[0]["lastLogin"].ToString();
                 lastChangePassword = dt.Rows[0]["lastChangePassword"].ToString();
-                isAdmin = 1; //dt.Rows[0]["isAdmin"].ToString()
-                             // isAdmin = (int)esAdmin;
-                             ezeputo
-                aux = dt.Rows[0]["isAdmin"].ToString();
-                if (aux.Equals("1") )
-                    {
-                    isAdmin = 0;
 
-                }
-           
+                var resultadoSql = FrameWork4.MiPerfil.esAdmin(email);
+                isAdmin = resultadoSql.Item2;
+
+                         
+
             }
             return Tuple.Create(res,firstName,lastName,lastLogin,lastChangePassword,isAdmin);
 
         }
 
-        
-            
+        //////////////////////
+
+        internal static Tuple<int, int> esAdmin(String sesion)
+        {
+            int res=0;
+            int isAdmin; 
+            DbCommand comando2 = Database.CreateCommand("Portal_User_Rol_Val");
+            comando2.Parameters.Add(Database.CreateParameter(comando2, "@sessionID", System.Data.DbType.String, sesion));
+            DataTable dt = Database.ExecuteSelectCommand(comando2);
+            isAdmin = (int)dt.Rows[0]["isAdmin"];
+            res = (int)dt.Rows[0]["res"];
+            return Tuple.Create(res, isAdmin);
+            }
+           
 
 
 

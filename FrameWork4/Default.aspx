@@ -16,9 +16,8 @@
         <asp:Button ID="ButtonToLogin" runat="server" OnClick="ButtonToLogin_Click" Text="ButtonToLogin" />
         <br />
         <br />
-        Mis datos de usuario&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <br />
-        <asp:Button ID="ButtonToProfile" runat="server" OnClick="ButtonToProfile_Click" Text="ButtonToProfile" />
         <br />
         <br />
         <br />
