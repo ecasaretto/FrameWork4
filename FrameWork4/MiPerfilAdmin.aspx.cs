@@ -11,6 +11,8 @@ namespace FrameWork4
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //var sesion = Session["sessionID"].ToString(); 
+
             if (Session["sessionID"] == null)
             {
                 Response.Redirect("Login.aspx");  // Sin Logeo Dirigido a Login
@@ -18,11 +20,11 @@ namespace FrameWork4
             else
             {
                 email.Text = Session["username"].ToString();
-                var resultadoSql = FrameWork4.MiPerfil.miPerfil(email.Text);
+                var resultadoSql = FrameWork4.MiPerfil.miPerfil(Session["username"].ToString());
                 firstName.Text = resultadoSql.Item2.ToString();
                 lastName.Text = resultadoSql.Item3.ToString();
                 lastLogin.Text = resultadoSql.Item4.ToString();
-                lastChangePassword.Text = resultadoSql.Item4.ToString();
+                lastChangePassword.Text = resultadoSql.Item5.ToString();
                // isAdmin.Text = "1";
 
 
